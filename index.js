@@ -18,7 +18,7 @@ const items = [
 
 // Home route
 app.get('/', (req, res) => {
-  res.render('index', { items });
+  res.render('index', { title: 'EJS App',  message: 'Hello from EJS!' });
 });
 
 // Add item form
@@ -35,6 +35,6 @@ app.post('/add', (req, res) => {
 
 // Start server
 const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
+app.listen(3000, () => {
   console.log(`Server running on http://localhost:${PORT}`);
 });
